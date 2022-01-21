@@ -51,12 +51,12 @@ while True:
             current_price = get_current_price("KRW-XRP")
             if target_price < current_price:
                 krw = get_balance("KRW")
-                if krw > 1000:
-                    upbit.buy_market_order("KRW-XRP", krw*14.9995)
+                if krw > 5000:
+                    upbit.buy_market_order("KRW-XRP", krw*12.9995)
         else:
             xrp = get_balance("XRP")
-            if xrp > 1.22100122:
-                upbit.sell_market_order("KRW-XRP", xrp*14.9995)
+            if xrp > 6.08:
+                upbit.sell_market_order("KRW-XRP", xrp*12.9995)
         time.sleep(1)
     except Exception as e:
         print(e)
